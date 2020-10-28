@@ -1,0 +1,164 @@
+﻿<Page
+    x:Class="ColorPalette_features.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ColorPalette_features"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:core="using:Syncfusion.UI.Xaml.Core.Extensions"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <local:ColorPaletteViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        
+        <Style TargetType="CheckBox"
+               x:Name="Checkbox_Style">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="50,0,50,0"/>
+        </Style>
+
+        <Style TargetType="ComboBox"
+               x:Name="ComboBox_Style">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="50,0,50,0"/>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Rectangle
+                Margin="20" Width="60"
+                Height="60"
+                Fill="{Binding Path=SelectedBrush}"/>
+            <syncfusion:SfColorPalette
+                        x:Name="colorPalette1"
+                        Width="300"
+                        ActivePalette="{Binding Path=ActivePalette}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        PaletteColors="{Binding Path=PaletteColors}"
+                        StandardColors="{Binding Path=StandardColors}"
+                        ShowDefaultColorButton="{Binding Path=ShowDefaultColorButton}"
+                        ShowMoreColorsButton="{Binding Path=ShowMoreColorsButton}"
+                        ShowNoColorButton="{Binding Path=ShowNoColorButton}"
+                        SelectedBrush="{Binding Path=SelectedBrush, Mode=TwoWay}">
+            </syncfusion:SfColorPalette>
+        </StackPanel>
+        <ScrollViewer Grid.Column="1">
+            <StackPanel Width="320">
+                <StackPanel  BorderThickness="1" BorderBrush="Black">
+                    <TextBlock
+                        Text="ColorPalette :"
+                        HorizontalAlignment="Left"
+                        FontSize="15"
+                        FontWeight="Bold"/>
+                    <CheckBox 
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowDefaultColorButton"
+                        IsChecked="{Binding Path=ShowDefaultColorButton, Mode=TwoWay}"/>
+                    <CheckBox
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowMoreColorsButton"
+                        IsChecked="{Binding Path=ShowMoreColorsButton, Mode=TwoWay}"/>
+                    <CheckBox
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowNoColorButton"
+                        IsChecked="{Binding Path=ShowNoColorButton, Mode=TwoWay}"/>
+                </StackPanel>
+
+                <StackPanel BorderThickness="1" BorderBrush="Black">
+                    <TextBlock
+                        Text="Theme Color Panel :"
+                        HorizontalAlignment="Left"
+                        FontSize="15"
+                        FontWeight="Bold"/>
+
+                    <ComboBox
+                        Margin="50,10,10,0"
+                        Header="ActivePalette"
+                        SelectedItem="{Binding Path=ActivePalette, Mode=TwoWay}"
+                        ItemsSource="{core:EnumValuesExtension Type=syncfusion:ColorPaletteNames}"/>
+                    <CheckBox
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowPaletteColorsHeader"
+                        IsChecked="{Binding Path=PaletteColors.ShowHeader, Mode=TwoWay}"/>
+                    <CheckBox 
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowPaletteColors"
+                        IsChecked="{Binding Path=PaletteColors.ShowColors, Mode=TwoWay}" 
+                        Command="{Binding PaletteCommand}"/>
+                    <CheckBox 
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowPaletteColorsShades"
+                        IsChecked="{Binding Path=PaletteColors.ShowColorShades, Mode=TwoWay}"
+                        Command="{Binding PaletteCommand}"/>
+                    <TextBox  
+                        Margin="50,5,10,5"
+                        Header="PaletteColorsHeader"
+                        Width="200"
+                        HorizontalAlignment="Left"
+                        Text="{Binding Path=PaletteColors.Header, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Slider
+                         Margin="50,5,10,5"
+                         Header="PaletteColorsShadesSpacing"
+                         Minimum="0"
+                         Maximum="30"
+                         Width="200"
+                         HorizontalAlignment="Left"
+                         IsEnabled="{Binding AllowPaletteColorShadesSpacing}"
+                         Value="{Binding Path=PaletteColors.ColorShadesSpacing, Mode=TwoWay}"/>
+                </StackPanel>
+                     
+                <StackPanel BorderThickness="1" BorderBrush="Black">
+                    <TextBlock
+                        Text="Standard Color Panel :"
+                        HorizontalAlignment="Left"
+                        FontSize="15"
+                        FontWeight="Bold"/>
+                    <CheckBox 
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowStandardColorsHeader"
+                        IsChecked="{Binding Path=StandardColors.ShowHeader, Mode=TwoWay}"/>
+                    <CheckBox 
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowStandardColors"
+                        IsChecked="{Binding Path=StandardColors.ShowColors, Mode=TwoWay}" 
+                        Command="{Binding PaletteCommand}"/>
+                    <CheckBox 
+                        Style="{StaticResource Checkbox_Style}"
+                        Content="ShowStandardColorsShades"
+                        IsChecked="{Binding Path=StandardColors.ShowColorShades, Mode=TwoWay}"
+                        Command="{Binding PaletteCommand}"/>
+                    <TextBox  
+                        Header="StandardColorsHeader"
+                        Width="200"
+                        Margin="50,5,10,5"
+                        HorizontalAlignment="Left"
+                        Text="{Binding Path=StandardColors.Header, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Slider
+                        Header="StandardColorsShadesSpacing"
+                        Margin="50,5,10,5"
+                        HorizontalAlignment="Left"
+                        Minimum="0"
+                        Maximum="30"
+                        Width="200"
+                        IsEnabled="{Binding AllowPaletteColorShadesSpacing}"
+                        Value="{Binding Path=StandardColors.ColorShadesSpacing, Mode=TwoWay}"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
