@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30428.66
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDownColorPalette_as_command", "DropDownColorPalette_as_command.csproj", "{696A5352-B9E5-49F1-A29D-1F42699AD337}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Debug|x64.ActiveCfg = Debug|x64
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Debug|x64.Build.0 = Debug|x64
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Debug|x64.Deploy.0 = Debug|x64
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Debug|x86.ActiveCfg = Debug|x86
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Debug|x86.Build.0 = Debug|x86
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Debug|x86.Deploy.0 = Debug|x86
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Release|x64.ActiveCfg = Release|x64
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Release|x64.Build.0 = Release|x64
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Release|x64.Deploy.0 = Release|x64
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Release|x86.ActiveCfg = Release|x86
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Release|x86.Build.0 = Release|x86
+		{696A5352-B9E5-49F1-A29D-1F42699AD337}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D3A8E0C-0213-47F2-BC36-77F4FF0A2AD0}
+	EndGlobalSection
+EndGlobal

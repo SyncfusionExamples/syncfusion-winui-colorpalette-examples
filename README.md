@@ -22,5 +22,9 @@ This repository contains the samples that demonstrate the functionalities of Win
  </tr>
   <tr>
   <td><a href="Samples/Custom-Colors">Custom UI for standard color palette header</a></td>
+  <td><a href="Samples/DropDown_ColorPalette">DropdownColorPalette features</a></td>
+  <td><a href="Samples/DropDownColorPalette_as_command">DropDownColorPalette as command</a></td>
+  <td><a href="Samples/DropDownColorPalette_as_command">Custom UI of  DropdownColorPalette</a></td>
+  <td><a href="Samples/DropDownColorPalette_as_command">Customize DropdownColorPalette content</a></td>
  </tr>
 </table>
