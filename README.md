@@ -1,5 +1,5 @@
-## WinUI ColorPalette control samples
-This repository contains the samples that demonstrate the functionalities of WinUI ColorPalette control.
+## WinUI ColorPalette and DroDownColorPalette control samples
+This repository contains the samples that demonstrate the functionalities of WinUI ColorPalette and DroDownColorPalette control.
 
 <table>
  <tr>
@@ -22,6 +22,7 @@ This repository contains the samples that demonstrate the functionalities of Win
  </tr>
   <tr>
   <td><a href="Samples/Custom-Colors">Custom UI for standard color palette header</a></td>
+  <td><a href="Samples/DropDown_ColorPalette">Getting Started with DropDownColorPalette</a></td>
   <td><a href="Samples/DropDown_ColorPalette">DropdownColorPalette features</a></td>
   <td><a href="Samples/DropDownColorPalette_as_command">DropDownColorPalette as command</a></td>
   <td><a href="Samples/DropDownColorPalette_as_command">Custom UI of  DropdownColorPalette</a></td>
