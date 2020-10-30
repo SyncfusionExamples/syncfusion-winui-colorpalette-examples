@@ -1,4 +1,4 @@
-## WinUi ColorPalette control samples
+## WinUI ColorPalette control samples
 This repository contains the samples that demonstrate the functionalities of WinUI ColorPalette control.
 
 <table>
