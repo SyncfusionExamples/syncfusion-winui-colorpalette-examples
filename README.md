@@ -1,5 +1,5 @@
 ## WinUI ColorPalette and DroDownColorPalette control samples
-This repository contains the samples that demonstrate the functionalities of WinUI ColorPalette and DropDownColorPalette control.
+This repository contains the samples that demonstrate the functionalities of WinUI ColorPalette and DropDownColorPalette controls.
 
 <table>
  <tr>
